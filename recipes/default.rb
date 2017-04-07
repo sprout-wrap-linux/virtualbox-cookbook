@@ -51,7 +51,9 @@ when 'debian'
     components ['contrib']
   end
 
-  package "virtualbox-#{node['virtualbox']['version']}"
+  package "virtualbox-#{node['virtualbox']['version']}" do
+    options '--allow-unauthorized'
+  end
   package 'dkms'
 
 when 'rhel', 'fedora'
