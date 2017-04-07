@@ -52,7 +52,7 @@ when 'debian'
   end
 
   package "virtualbox-#{node['virtualbox']['version']}" do
-    options '--allow-unauthorized'
+    options '--allow-unauthenticated'
   end
   package 'dkms'
 
